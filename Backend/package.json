@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "food delivery website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajitkumar-25/Food_Delivery.git"
+  },
+  "author": "Ajit Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ajitkumar-25/Food_Delivery/issues"
+  },
+  "homepage": "https://github.com/Ajitkumar-25/Food_Delivery#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22"
+  }
+}

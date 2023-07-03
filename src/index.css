@@ -12,3 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+#carousel{
+  width: 100%;
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #000;
+}

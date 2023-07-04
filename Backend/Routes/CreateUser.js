@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const user = require("../Models/users");
 const { body, validationResult } = require("express-validator");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+const jwt_secret="t"
+
 router.post(
   "/createuser",
   [
@@ -15,12 +19,15 @@ router.post(
       return resp.status(400).json({ errors: errors.array() });
     }
 
+    const salt = await bcrypt.genSalt(10);
+    const secPass = await bcrypt.hash(req.body.password, salt);
+
     try {
       await user.create({
         name: req.body.name,
         email: req.body.email,
         location: req.body.location,
-        password: req.body.password,
+        password: secPass,
       });
       resp.json({ success: true });
     } catch (error) {
@@ -50,10 +57,23 @@ router.post(
       if (!userdata) {
         return resp.status(400).json({ error: "invalid email" });
       }
-      if (userdata.password !== req.body.password) {
+      const pwdcompare = await bcrypt.compare(
+        req.body.password,
+        userdata.password
+      );
+      if (!pwdcompare) {
         return resp.status(400).json({ error: "invalid password" });
       }
-      return resp.json({ success: true });
+
+      const data = {
+        user: {
+          id: userdata.id,
+        },
+      };
+
+      // create jwt token and send it in response header with status code as well
+      const authtoken = jwt.sign(data, jwt_secret);
+      return resp.json({ success: true, authtoken: authtoken });
     } catch (error) {
       console.log(error);
       resp.json({ success: false });

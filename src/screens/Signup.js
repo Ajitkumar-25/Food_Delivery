@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 const Signup = () => {
   const [credentials, setcredentials] = useState({
     name: "",
@@ -39,6 +40,9 @@ const Signup = () => {
   };
 
   return (
+    <>
+    <div><Navbar/></div>
+
     <div className="container mt-5 p-4">
       <h1 style={{ textAlign: "center" }}>Hello this is a signup page</h1>
       <form onSubmit={handlesubmit}>
@@ -107,6 +111,7 @@ const Signup = () => {
         </Link>
       </form>
     </div>
+    </>
   );
 };
 

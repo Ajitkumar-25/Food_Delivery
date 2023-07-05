@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 
 const Login = () => {
   const [credentials, setcredentials] = useState({
@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <>
-    <div><Navbar/></div>
+    {/* <div><Navbar/></div> */}
     <div className="container mt-5 p-4">
       <h1 style={{ textAlign: "center" }}>Hello this is a Login page</h1>
       <form  onSubmit={handlesubmit}>

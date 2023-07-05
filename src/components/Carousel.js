@@ -45,7 +45,7 @@ const Carousel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://th.bing.com/th/id/OIP.OZny5F6g0QAQPLsU_4HnEAHaE8?w=284&h=189&c=7&r=0&o=5&pid=1.7"
+              src="https://media.istockphoto.com/photos/chinese-food-veg-pizza-picture-id1341905237?k=20&amp;m=1341905237&amp;s=612x612&amp;w=0&amp;h=Lbuza1Ig5cC1PwQhqTsq-Uac8hg1W-V0Wx4d4lqDeB0="
               className="d-block w-100"
               alt="..."
               style={{ filter: "brightness(60%)" ,height:'500px',objectFit:"cover" }}

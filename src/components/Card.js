@@ -1,13 +1,18 @@
 import React from "react";
+import { useState } from "react";
 const Card = (props) => {
   
+const [price, setprice] = useState(0);
 
+const handleselect = (e) => {
+    setprice(e.target.value);
+}
   return (
     <div>
       <div>
         <div
           className="card m-3 border border-success  "
-          style={{ width: "18rem", maxHeight: "400px" }}
+          style={{ width: "19rem", maxHeight: "400px" }}
         >
           <img
             className="card-img-top"
@@ -29,12 +34,14 @@ const Card = (props) => {
                   );
                 })}
               </select>
-              <select className="m-2 h-100  bg-success rounded">
+              <select className="m-2 h-100  bg-success rounded" name="price" onChange={handleselect}>
+                <option value="0" key="select">select</option>
                 {
                   // map the data of food with below cart
                   Object.keys(props.options[0]).map((item) => {
+                    // console.log(props.options[0][item]);
                     return (
-                      <option key={item} value={item}>
+                      <option key={item} value={props.options[0][item]}>
                         {item}
                       </option>
                     );
@@ -42,7 +49,7 @@ const Card = (props) => {
                   )
                 }
               </select>
-              <div className="d-inline h-100 fs-5">Total Price:{}</div>
+              <div className="d-inline h-100 fs-5">Total Price : {price} &#x20b9; </div>
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ app.get('/',(req,res)=>{
 }
 );
 app.use('/api',require('./Routes/CreateUser'))
+app.use('/api',require('./Routes/DisplayData'))
 // Start the server on specified PORT number
 app.listen(port,()=>{
     console.log(`Server started on port ${port}`);

@@ -69,9 +69,9 @@ const Card = (props) => {
             </div>
             <hr />
 
-            <button className="btn btn-success justify-center ms-2 mx-5">
+            <Link to={"/cart"} className="btn btn-success justify-center ms-2 mx-5">
               Add To Cart
-            </button>
+            </Link>
 
             {localStorage.getItem("authtoken") ? (
               <Link

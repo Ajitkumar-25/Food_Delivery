@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import Payment from "./screens/payment";
-// import { CartProvider } from "./components/ContextReucer";
+import Cart from "./screens/Cart";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/payment" element={<Payment/>}/>
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
     </Router>
     // </CartProvider>

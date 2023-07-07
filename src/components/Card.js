@@ -1,18 +1,18 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Card = (props) => {
-  
-const [price, setprice] = useState(0);
+  const [price, setprice] = useState(0);
 
-const handleselect = (e) => {
+  const handleselect = (e) => {
     setprice(e.target.value);
-}
+  };
   return (
     <div>
       <div>
         <div
           className="card m-3 border border-success  "
-          style={{ width: "19rem", maxHeight: "400px" }}
+          style={{ width: "19rem", maxHeight: "480px" }}
         >
           <img
             className="card-img-top"
@@ -34,8 +34,14 @@ const handleselect = (e) => {
                   );
                 })}
               </select>
-              <select className="m-2 h-100  bg-success rounded" name="price" onChange={handleselect}>
-                <option value="0" key="select">select</option>
+              <select
+                className="m-2 h-100  bg-success rounded"
+                name="price"
+                onChange={handleselect}
+              >
+                <option value="0" key="select">
+                  select
+                </option>
                 {
                   // map the data of food with below cart
                   Object.keys(props.options[0]).map((item) => {
@@ -45,12 +51,21 @@ const handleselect = (e) => {
                         {item}
                       </option>
                     );
-                  }
-                  )
+                  })
                 }
               </select>
-              <div className="d-inline h-100 fs-5">Total Price : {price} &#x20b9; </div>
+              <div className="d-inline h-100 fs-5">
+                Total Price : {price} &#x20b9;
+              </div>
             </div>
+            <hr />
+
+            <button className="btn btn-success justify-center ms-2 mx-5">
+              Add To Cart
+            </button >
+            <Link to={"/payment"} className="btn btn-success justify-center ms-2 " >
+              Pay Now
+            </Link>
           </div>
         </div>
       </div>

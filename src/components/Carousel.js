@@ -32,15 +32,15 @@ const Carousel = () => {
               src="https://images.moneycontrol.com/static-mcnews/2021/03/Burger.jpg"
               className="d-block w-100"
               alt="..."
-              style={{ filter: "brightness(60%)",height:'500px',objectFit:"cover"}}
+              style={{ filter: "brightness(40%)",height:'500px',objectFit:"cover"}}
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://th.bing.com/th/id/OIP.aQbpPEudH_rERC_z8hc7mQHaE8?w=248&h=180&c=7&r=0&o=5&pid=1.7"
+              src="https://images.pexels.com/photos/1460872/pexels-photo-1460872.jpeg"
               className="d-block w-100"
               alt="..."
-              style={{ filter: "brightness(60%)" ,height:'500px',objectFit:"cover" }}
+              style={{ filter: "brightness(40%)" ,height:'500px',objectFit:"cover" }}
             />
           </div>
           <div className="carousel-item">
@@ -48,7 +48,7 @@ const Carousel = () => {
               src="https://media.istockphoto.com/photos/chinese-food-veg-pizza-picture-id1341905237?k=20&amp;m=1341905237&amp;s=612x612&amp;w=0&amp;h=Lbuza1Ig5cC1PwQhqTsq-Uac8hg1W-V0Wx4d4lqDeB0="
               className="d-block w-100"
               alt="..."
-              style={{ filter: "brightness(60%)" ,height:'500px',objectFit:"cover" }}
+              style={{ filter: "brightness(40%)" ,height:'500px',objectFit:"cover" }}
             />
           </div>
         </div>

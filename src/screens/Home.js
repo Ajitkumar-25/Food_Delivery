@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <Navbar />
+        <Navbar /> 
       </div>
       <div>
         <Carousel />
@@ -43,6 +43,7 @@ const Home = () => {
                 description={food[item].description}
                 img={food[item].img}
                 options={food[item].options}
+                // fooditems={food[item]}
               />
             );
           })

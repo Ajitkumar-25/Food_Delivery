@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "boxicons";
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -54,7 +55,15 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="d-flex">
-              <div className="btn bg-white text-success mx-2">Mycart</div>
+              <div className="btn bg-white text-success mx-2 px-3">
+                <box-icon
+                  type="solid"
+                  name="cart"
+                  color="#5cb85c"
+                  animation="tada"
+                  size="xl"
+                ></box-icon>
+              </div>
               <div
                 className="btn bg-danger text-white mx-2"
                 onClick={handlelogout}
